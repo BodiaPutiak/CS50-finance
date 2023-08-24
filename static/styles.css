@@ -1,0 +1,85 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.quote-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    margin-right: 35px;
+    margin-left: 100px;
+}
+
+.buy-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 40px;
+    align-items: center;
+    margin-right: 35px;
+
+}
+
+
+.search-box {
+    flex: 1;
+    height: 36px;
+    font-size: 16px;
+    width: 400px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.search-box:hover {
+    transform: scale(1.03);
+}
+
+.search-button {
+    cursor: pointer;
+    height: 40px;
+    width: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    transition: all 0.3s;
+}
+
+.search-icon {
+    height: 28px;
+}
+
+
+.search-button:hover {
+    transform: scale(1.2);
+}

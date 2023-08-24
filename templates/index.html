@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in portfolio %}
+            {% if (row.shares > 0) %}
+                <tr>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.shares }}</td>
+                    <td>{{ row.price }}</td>
+                    <td>{{ row.total }}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3"><strong>TOTAL:</strong> {{ total }}</td>
+        </tr>
+    </tfoot>
+</table>
+{% endblock %}

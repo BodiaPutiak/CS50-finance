@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Transaction type</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total value</th>
+            <th>Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+        {% for row in history %}
+            <tr>
+                <td>{{ row.transaction_type }}</td>
+                <td>{{ row.symbol }}</td>
+                <td>{{ row.shares }}</td>
+                <td>{{ row.price }}</td>
+                <td>{{ row.TOTAL|abs }}</td>
+                <td>{{ row.time_stamp}}</td>
+            </tr>
+        {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %} Buy {% endblock %}
+
+{% block main %}
+
+<div class="buy-container">
+    <h1>Buy stocks</h1>
+    <h1>Your current balance is {{ balance }}</h1>
+    <form autocomplete="off" autofocus action="/buy" method="POST">
+        <input class="form-control" placeholder="Symbol" name="symbol" type="search">
+        <br>
+        <h3>How many stocks do you want to buy?</h3>
+        <input type="number" name="number" min="1" class="form-control" placeholder="Number">
+        <br>
+        <button type="submit" class="btn btn-primary">Buy</button>
+    </form>
+{% endblock %}
